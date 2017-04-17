@@ -89,6 +89,8 @@ public final class Wechat {
     private static final String DATAS = "me.hao0.wechat.core.Datas";
 
     private static final String JSSDKS = "me.hao0.wechat.core.JsSdks";
+    
+    private static final String TEMPATES = "me.hao0.wechat.core.Tempates";
 
     private static final AccessTokenLoader DEFAULT_ACCESS_TOKEN_LOADER = new DefaultAccessTokenLoader();
 
@@ -172,6 +174,10 @@ public final class Wechat {
 
     public JsSdks js(){
         return (JsSdks)components.getUnchecked(JSSDKS);
+    }
+    
+    public Tempates tempates(){
+        return (Tempates)components.getUnchecked(TEMPATES);
     }
 
     private void injectWechat(Class clazz, Object comp) throws NoSuchFieldException {
